@@ -1,4 +1,4 @@
-Print ("Fibonacci Iterativo")
+print ("Fibonacci Iterativo")
 def Iterativo_Fibonacci (Posicion, Out_Salida):
     Ejecuta_Ahora = 0
     Ejecuta_Despues = 1
@@ -10,7 +10,7 @@ def Iterativo_Fibonacci (Posicion, Out_Salida):
         Ejecuta_Despues = Ejecuta_Despues + Valor_Temporal
     return Valor_Temporal
 
-Posicion = 10
+Posicion = int(input("Ingrese la posición a calcular: "))
 
 print(f"Imprimiendo Fibonacci hasta {Posicion}")
 Iterativo_Fibonacci(Posicion, True)
