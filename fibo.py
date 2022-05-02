@@ -14,3 +14,19 @@ Posicion = int(input("Ingrese la posición a calcular: "))
 
 print(f"Imprimiendo Fibonacci hasta {Posicion}")
 Iterativo_Fibonacci(Posicion, True)
+
+print ("Fibonacci Recursivo")
+def Recursivo_Fibonacci (Posicion):
+    if Posicion < 2:
+        return Posicion
+    return Recursivo_Fibonacci (Posicion - 1) + Recursivo_Fibonacci (Posicion - 2)
+
+# IMPRIMIENDO HASTA LLEGAR AL RESULTAD
+print(f"Imprimiendo serie hasta posición {Posicion}")
+Iterativo_Fibonacci (Posicion, True)
+# CALCULANDO EL VALOR
+valor = Iterativo_Fibonacci (Posicion, False)
+print(f"\nFibonacci de {Posicion} con método iterativo es {valor}")
+# DE MANERA ITERATIVA
+valor = Recursivo_Fibonacci (Posicion)
+print(f"Fibonacci de {Posicion} con método recursivo es {valor}")
