@@ -18,6 +18,7 @@ Iterativo_Fibonacci(Posicion, True)
 
 
 
+
 print ("Fibonacci Recursivo")
 def Recursivo_Fibonacci (Posicion):
     if Posicion < 2:
@@ -34,4 +35,24 @@ print(f"\nFibonacci de {Posicion} con método iterativo es {valor}")
 valor = Recursivo_Fibonacci (Posicion)
 print(f"Fibonacci de {Posicion} con método recursivo es {valor}")
 
+
+
+
+
+#Fibonacci MEMORIA
+contenedor = {}
+def Memoria_Fibonacci(num):
+        if  (num < 2):
+                return 1
+        elif (num in contenedor):
+                return contenedor[num]
+        else:
+                x = Memoria_Fibonacci(num - 1) + Memoria_Fibonacci(num - 2)
+                contenedor[num] = x
+                return x
+
+#Corrigiendo el input del valor a calcular
+Ingreso = (int(input("El orden a calcular: ")))
+IngresoCorregido = Ingreso - 1
+print(Memoria_Fibonacci(IngresoCorregido))
 
