@@ -56,3 +56,25 @@ Ingreso = (int(input("El orden a calcular: ")))
 IngresoCorregido = Ingreso - 1
 print(Memoria_Fibonacci(IngresoCorregido))
 
+
+
+
+# Fibonacci Logarítmico
+def Log_fibonacci(n):
+    # Auxiliar: Retorna T si n es un número par
+    hasta = lambda n: (n % 2 == 0)
+
+    (actual, siguiente, a,b) = (0, 1, 0, 1)    
+#ALGORITMO
+    while (n > 0):
+        if (hasta(n)):
+            (a, b) = (a**2 + b**2, b**2 + 2*a*b)
+            n /= 2
+        else:
+            (actual, siguiente) = (a*actual + b*siguiente, b*actual + (a+b)*siguiente)
+            n -= 1
+    
+    return actual
+#PRINT
+print(Log_fibonacci(15))
+
